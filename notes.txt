@@ -1,0 +1,468 @@
+objects in python
+------------------
+Everything is python is object
+***** Every object contains set of methods *****
+
+
+number
+-------
+number can be integer or octal or hexa or decimal
+
+a  = 10
+b = 20
+value = 35.4
+
+string
+-------
+string is sequence of characters
+string is defined in single or double or triple quotes
+
+name = 'python programming'
+aname = "unix shell scripting"
+bname = """java programming"""
+cname = '''ruby programming'''
+
+list ( just like array in c )
+----------------------------
+- List contains set of elements
+- Elements can be set of numbers or set of strings or any combination.
+- List elements are defined in [].
+
+alist = [10,20,30,40]
+blist = ["unix","java","oracle"]
+clist = [10,20,"java","oracle",30]
+
+
+
+tuple  ( READ ONLY)
+------
+- tuple contains set of elements
+- Elements can be set of numbers or set of strings or any combination.
+- tuple elements are defined in ().
+***** Elements defined inside tuple cannot be modified *****
+
+atup = (45,34,346,6)
+btup = ("java","hadoop",45,54.45)
+ctup = (10,20,"java","oracle")
+
+
+dictionary
+------------
+dictionary contains elements in the form of keys and values.
+value can be integer or string or list or tuple or dictionary
+dictionary elements are defined in {}.
+keys are always UNIQUE
+
+Syntax :   object = { key:value , key : value , key :value }
+Example:   book   = { "chap1":10 ,"chap2":20  , "chap3":30 }
+           info   = {  1:2,  3:4,  5:6}
+
+set
+-----
+set is simply group of UNIQUE elements of same type.
+set elements are defined in {}.
+
+aset = {10,20,30,10,20,30,40}
+
+methods & functions
+---------------------
+
+
+methods are object specific & methods are accessed with . operator
+- string methods are different to list methods
+- list methods are different to dictionary methods
+
+
+functions are common for all the objects
+print(alist)
+print(atup)
+print(aset)
+
+How to display all the list of builtin functions & Excepitons?
+--------------------------------------------------------------
+In the console ...  
+
+dir(__builtins__)
+
+
+classification of objects
+------------------------
+
+mutable objects ( changable objects )
+---------------------------------------
+list
+dictionary
+
+
+immutable objects ( unchangable objects )
+---------------------------------------
+string
+tuple
+set
+
+frequently used functions
+---------------------------
+
+print()   : display the output on the screen
+input()   : capture input from the keyboard ( just like read in linux shell)
+range()   : iterate range of numbers
+len()     : display the length of object
+type()    : display the class of object
+id()      : display the unique reference of object 
+isinstance(): will return the boolean
+zip()     : combining two lists
+open()    : opening file
+dir()     : display all the available methods
+help()    : just like manual
+
+conversion functions
+--------------------
+str()     : converting to str object         str(10)  will become   '10'
+int()     : converting to int object         int(10.5) will become  10
+float()   : converting to float object       float(10) will become 10.0
+hex()     : converting to hexadecimal format
+oct()     : converting to octal format
+list()    : converting to list format        list((10,20,30)) will become [10,20,30]
+tuple()   : converting to tuple format        tuple([10,20,30]) will become (10,20,30)
+dict()    : converting to dict format
+set()     : converting to set format          set([10,20,30,10]) ---> {10,20,30}
+  
+
+
+
+statements
+-----------
+
+
+contitional statements
+----------------------
+if
+if-else
+if-elif-elif.... else
+
+
+control statements
+-------------------
+for
+while
+
+
+jump statements
+---------------
+break
+continue
+
+
+
+Operators
+----------
+
+arithmetic operators :  + -  * / %
+
+assignment operators : ( ++ and -- are not allowed)
+------------------------
+val = 10
+
+val = val + 1   (or) val+=1
+val = val - 1   (or) val-=1
+val = val * 1   (or) val*=1
+
+logical operators
+------------------
+and
+or
+not
+
+relational operator
+--------------------
+> <  >= <= == !=
+
+special operators
+------------------
+in     if  "python"  in  "python programming" :
+	    # do something
+
+       if  10 in [10,20,30]:
+	   # do something
+
+       adict = {"chap1":10 , "chap2":20 }
+       if "chap1"  in adict:
+	    print("key exists")
+
+
+as  ( used in exception handling and libraries )
+
+
+ 
+
+
+
+
+level1
+level1
+level1
+level1
+if condition:
+     level2
+     level2
+     level2
+     if condition:
+	level3
+	level3
+	level3
+     else:
+        level3
+	level3
+     level2
+     level2
+else:
+     level2
+     level2
+level1
+level1
+level2
+
+
+file handling
+--------------
+
+- Working with flat files  ( csv conf log txt )
+- Working with third party files ( pdf xlsx doc ppt mp4 .)
+
+
+
+
+Working with flat files
+------------------------
+
+opening the file
+---------------
+
+
+syntax:  objectname = open(filename,mode)             
+Example:      fobj  = open("clients.txt","r") 
+	      fobj  = open("clients.txt","w")        date > today.txt
+	      fobj  = open("clients.txt","a")        date >> today1.txt
+
+
+
+
+
+closing the file
+-----------------
+
+
+fobj.close()
+
+
+
+read operation
+---------------
+
+- reading line by line
+- reading the whole file at a time
+- reading with csv library( for csv files ) , json library( for json files )
+- reading with pandas library ( mostly used in analytics )
+
+
+
+
+exception handling
+-------------------
+
+There are 2 type of errors
+
+1. syntax error
+
+2. semantic error or runtime error ( FileNotFoundError .. ValueError.. TypeError ..)
+
+
+Handling the exceptions in the runtime is known as exception handling
+
+4 keys are used in exception handling
+-------------------------------------
+try     : all our code is defined in try block
+except  : if any Error found in try block .. except block will be executed
+else    : If no error/exception found ...... else block will be executed
+finally : will be executed all the times
+
+
+
+
+
+libraries
+----------
+
+builtin libraries
+
+third party libraries
+
+
+builtin libraries
+------------------
+builtin libraries are installed with the python and builtin libraries are generally used ( file handling, zip , archives ... )  by everyone .
+
+path : C:\Users\GBMAUHTRN\Anaconda3\Lib
+
+
+third party libraries
+----------------------
+Depending on the customized requirement( working with excel files , DB operations , cloud opreations , networking , web applications ), developer has to install the third party library from www.pypi.org
+
+path : C:\Users\GBMAUHTRN\Anaconda3\Lib\site-packages
+
+
+importing library
+--------------------
+
+all the methods are accessed with . operator
+--------------------------------------------
+import math
+print(math.tan(2))
+print(math.floor(45.5))
+
+
+importing required methods ONLY   ( . is NOT required as we are importing required
+------------------------------                                       methods ONLY0
+from math import floor,tan
+print(floor(567.2))
+print(tan(2))
+
+
+importing with alias name
+--------------------------
+import math as m
+print(m.tan(3))
+print(m.cos(2))
+
+
+
+frequently used libraries
+--------------------------
+
+os       : OS level operations ( list files  , deleting directories ,...)
+sys      : python and system config information
+time     : display timestamp and other time related operations
+datetime : display timestamp and other date and time operations
+random   : generating random numbers,strings ...
+shutil   : shell utilities ( copy , move , rmtree , create_zip )
+csv      : reading and writing csv files
+json     : reading and writing json files
+zipfile  : create/archive/extract zip files
+tarfile  : create/archive/extract tar files
+rarfile  : create/archive/extract rar files
+http     : working with http web
+urllib   : reading/downloading from web
+sqlite3  : python default database
+xml      : reading xml
+calendar : displaying calendar on monthly,yearly basis
+filecmp  : comparing two files,folders
+glob     : displaying all the files
+numbers  : working more with numbers
+pdb      : python debugger
+re       : grep  + awk + sed
+smtplib  : sending mails
+telnet   : telnet operations
+subprocess : executing system commands
+ftplib   :  performing ftp opreations
+
+
+
+third party libraries
+---------------------------
+
+database related
+---------------
+
+cx_Oracle :  connecting to oracle database
+pymysql   :  connecting to mysql database
+pymongo   :  connecting to mongodb
+pyspark   :  connecting to spark
+
+
+desktop/GUI development
+--------------------------
+tkinter   :  building GUI application like calculator, notepad
+wxPython  :  building GUI application like calculator, notepad
+
+
+ssh,networking,ftp
+------------------
+paromiko  : connecting to remote servers via ssh prototype
+netmiko   :  connecting to router,switch,....
+pysftp    :  ftp files via ftp protocol
+
+analytics
+------------
+numpy     : performing numerical operations 
+scipy     : performing scientific operations
+pandas    : reading/writing/cleaning/processing the files like json,html,xml..
+matplotlib: getting visualizations
+seaborn   : getting visualizations
+ 
+
+web scrapping
+-------------
+
+requests      : reading from the web
+beautifulsoup :  reading from html
+
+
+image processing
+-----------------
+opencv
+pillow 
+
+cloud computing
+------------------
+
+boto3 : working with aws cloud infrastructure
+oci   : workin with oracle cloud
+azure : working with microsoft cloud
+
+
+functions/definition/subroutine
+----------
+
+-builtin functions
+-user defined functions
+
+
+user defined functions
+----------------------
+user defined functions are developed the the programmer for the reusability purpose.
+
+
+
+
+different ways of passing parameters
+------------------------------------
+
+fixed arguments
+
+default arguments
+
+variable length arguments
+
+
+lambda :  lambda is replacmenet for one liner functions
+	  lambda is called as  inline function.
+          lambda is the replacement for the functions having 1 or 2 lines of code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
